@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Configuration for emacs 20</title>
+</head>
+
+<body>
+<h1>Configuration for emacs 20 or up</h1>
+<p>This emacs configuration works on both Windows NT emacs and Linux
+emacs environment.  
+<h3>Installation</h3>
+In linux, the emacs is installed by
+default.  For Windows, please
+download it first and install.  See <a href=#ntemacs>Here</a>
+<p>For Windows NT, follow the following steps:
+<ul>
+<li>set HOME environment variable.</li>
+<li>copy the elisp.zip to your HOME dir, and do an 'unzip'.</li>
+<li>Modify the '_emacs' file in your
+HOME dir, change the '*HOME*' to
+your home dir in '_emacs' file.
+</li>
+<li>Then start 'emacs', you are all set.</li>
+</ul>
+
+<p>
+<h2>Here are some features:</h2>
+
+<h3>VI mode</h3>
+I am addict to vi.  I use viper mode (vi keybinding for emacs) inside
+emacs.  Several file format such as .java, .c, .h, .html will
+automatically use viper mode.   To switch between vi mode and emacs
+mode, use Ctrl-Z.
+
+<h3>Java mode</h3>
+By default, java mode is supported.  It supports syntax highlight,
+smart indent, auto-completion.  And if configured well, press [F1],
+and type in the jdk class you want to load, it will show the class
+you want.  Please change the jdk src root in sun-java.el.
+<p>Ctrl-mouse-right-button will show methods in the current class.
+
+<h3>Other modes</h3>
+This configuration also supports
+html mode, css mode, perl mode,
+C/C++ mode.
+
+<h3>Keybinding</h3>
+<ul>
+  <li>Ctrl-left-mouse-button: show files in buffers.
+  <li>Ctrl-right-mouse-button: show methods in a class.
+  <li>F1: Load jdk class
+  <li>F4: run 'grep'
+  <li>F5: show speedbar
+  <li>F6: run 'ff edit', need
+  install Firefly first, and modify
+  some variables.
+  <li>F7: run 'ff delget'. 
+</ul>
+
+<h3>NT emacs</h3>
+<a name=ntemacs>Goto this link:
+<a href="http://www.cs.washington.edu/~voelker/ntemacs/windows/">NT
+emacs</a>
+
+<hr>
+<address>kaiyang@hansky.com</address>
+</body> </html>

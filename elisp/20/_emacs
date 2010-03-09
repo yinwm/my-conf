@@ -1,0 +1,39 @@
+;;; customize these
+
+;;; set your HOME directory, it should be where your .emacs and elisp/ live 
+(setq *HOME* "d:\\home\\kaiyang")
+;;; where your bin directory is (for firefly.el)
+(setq *HBIN* "/buildenv")
+
+;;; these are cool, but turned off by default
+;;; if true, start gnuserv at startup
+(setq *USE-GNUSERV* nil)
+;;; use the hell's programmer font
+(setq *USE-HELLS* nil)
+;;; load sun-java
+(setq *USE-SUN-JAVA* t)
+
+;;; load init.el depending emacs version, currently only support emacs 20
+(let ((which-emacs (cond
+		    ((string-match "l" emacs-version) "lemacs")
+		    ((string-match "^19" emacs-version) "19")
+		    ((string-match "^20" emacs-version) "20")
+		    ((boundp 'epoch::version) "epoch")
+		    ((string< emacs-version "19") "emacs")
+		    (t "lemacs")
+		    )
+	  	   )
+      )
+  (message which-emacs)
+  (let ((init-src-path (format "%s/elisp/%s/init.el" *HOME*  which-emacs))
+	(init-bcp-path (format "%s/elisp/%s/init.elc" *HOME* which-emacs)))
+    (if (file-newer-than-file-p init-src-path init-bcp-path)
+	(load init-src-path 'want-errors 'quiet)
+      (load init-bcp-path 'want-errors 'quiet)
+     )
+    )
+  )
+(custom-set-variables
+ '(speedbar-use-images t)
+ '(scroll-bar-mode (quote right)))
+(custom-set-faces)
