@@ -4,7 +4,9 @@ autodetach on
 defscrollback 2000
 vbell off
 
-caption always "%{= dd}%-w%{+bu}%n %t%{-}%+w"
+#caption always "%{= dd}%-w%{+bu}%n %t%{-}%+w"
+
+#caption always '%{= kg}[%{G}%H%{g}][%= %{= kw}%?%-Lw%?%{+b r}(%{y}%n %t%?(%u)%?%{r})%{= w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
 #shelltitle "name:cmd"
 
 hardstatus on
@@ -18,4 +20,6 @@ termcapinfo xterm* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
 shell                 bash
 #shelltitle            "$ |bash"
+
+escape ^yy
 
