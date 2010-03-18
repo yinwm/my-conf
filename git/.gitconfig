@@ -21,7 +21,10 @@
     whitespace = red reverse 
   [core]
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-    autocrlf = true
+    autocrlf = input
+
+  [apply]
+    whitespace = nowarn
 
 
   [alias]
@@ -31,10 +34,9 @@
     co = checkout
     df = diff
     lg = log -p
-[apply]
-      whitespace = nowarn
 
-[user]
+
+  [user]
 	name = yinwm
 	email = yinweiming@gmail.com
 
