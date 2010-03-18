@@ -32,7 +32,7 @@
     ci = commit
     br = branch
     co = checkout
-    df = diff
+    df = diff -b -w
     lg = log -p
 
 
