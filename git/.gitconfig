@@ -20,8 +20,7 @@
   [color "diff"]
     whitespace = red reverse 
   [core]
-    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-    autocrlf = input
+    whitespace=fix,-indent-with-non-tab,trailing-space
 
   [apply]
     whitespace = nowarn
