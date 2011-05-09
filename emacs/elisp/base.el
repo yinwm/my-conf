@@ -92,3 +92,8 @@
 (setq tramp-default-method "ssh")
 
 (set-default-font "Dejavu Sans Mono")
+
+
+(require 'ahg)
+(require 'mercurial)
+
