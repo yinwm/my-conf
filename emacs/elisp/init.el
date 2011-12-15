@@ -55,8 +55,9 @@
      (hilit-translate type     'RoyalBlue   ; enable highlighting in C/C++
 		 string	  nil)         ; disable string highlighting
 
-(autoload 'javascript-mode "javascript" nil t)
-(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
+;(autoload 'javascript-mode "javascript" nil t)
+;(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
+
 
 (require 'wb-line-number)
 

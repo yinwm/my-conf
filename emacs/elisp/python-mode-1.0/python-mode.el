@@ -1221,7 +1221,7 @@ py-beep-if-tab-change\t\tring the bell if `tab-width' is changed"
       ;; It's okay if this fails to guess a good value
       (if (and (py-safe (py-guess-indent-offset))
 	       (<= py-indent-offset 8)
-	       (>= py-indent-offset 2))
+	       (>= py-indent-offset 4))
 	  (setq offset py-indent-offset))
       (setq py-indent-offset offset)
       ;; Only turn indent-tabs-mode off if tab-width !=

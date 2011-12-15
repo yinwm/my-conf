@@ -34,8 +34,8 @@
 
 
 ;; javascript
-(autoload 'js-mode "javascript" nil t)
-(setq auto-mode-alist (cons '("\\.js$" . js-mode) auto-mode-alist))
+;; (autoload 'js-mode "javascript" nil t)
+;;  (setq auto-mode-alist (cons '("\\.js$" . js-mode) auto-mode-alist))
 
 
 ;; line number
