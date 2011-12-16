@@ -176,3 +176,7 @@
  (add-hook 'yaml-mode-hook
       '(lambda ()
          (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/elisp//ac-dict")
+(ac-config-default)
