@@ -24,7 +24,7 @@
       (foreground-color . "#eeeeec")
       (mouse-color . "black"))
      (fringe ((t (:background "#1a1a1a"))))
-     (mode-line ((t (:foreground "#eeeeec" :background "#555753"))))
+     (mode-line ((t (:foreground "#e5e5e1" :background "#0f8a4b"))))
      (region ((t (:background "#0d4519"))))
      (font-lock-builtin-face ((t (:foreground "#729fcf"))))
      (font-lock-comment-face ((t (:foreground "#888a85"))))
@@ -37,6 +37,8 @@
      (font-lock-warning-face ((t (:foreground "Red" :bold t))))
      )))
 (provide 'py_color)
+
+
 
 (require 'color-theme)
 (color-theme-initialize)
