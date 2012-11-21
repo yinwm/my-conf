@@ -56,7 +56,7 @@
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
-(tool-bar-mode nil)
+;(tool-bar-mode nil)
 (column-number-mode 1)
 
 ;; add goto-line
@@ -146,7 +146,7 @@
 
 (defun coffee-custom ()
   "coffee-mode-hook"
- (set (make-local-variable 'tab-width) 2))
+ (set (make-local-variable 'tab-width) 4))
 
 (add-hook 'coffee-mode-hook
   '(lambda() (coffee-custom)))
@@ -179,6 +179,15 @@
       '(lambda ()
          (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/elisp//ac-dict")
-(ac-config-default)
+;(require 'auto-complete-config)
+;(add-to-list 'ac-dictionary-directories "~/elisp//ac-dict")
+;(ac-config-default)
+
+(autoload 'markdown-mode "markdown-mode.el"
+   "Major mode for editing Markdown files" t)
+(setq auto-mode-alist
+   (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
+(require 'golden-ratio)
+
+(golden-ratio-enable)

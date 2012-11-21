@@ -22,6 +22,7 @@
   [core]
     whitespace=fix,-indent-with-non-tab,trailing-space
 	quotepath = false
+	excludesfile = /Users/yinwm/.gitignore_global
 
   [apply]
     whitespace = nowarn
@@ -37,8 +38,8 @@
 
 
   [user]
-	name = yinwm
-	email = yinwm@vzhishu.com
+	name = Weiming Yin
+	email = weiming.yin@gmail.com
 
   [merge]
 	keepBackup = false;
@@ -50,3 +51,9 @@
 	trustExitCode = false
 	keepBackup = false
 
+[difftool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
