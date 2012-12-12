@@ -58,17 +58,3 @@
 ;(autoload 'javascript-mode "javascript" nil t)
 ;(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
 
-
-(require 'wb-line-number)
-
-     (add-hook 'java-mode-hook 'my-java-mode-hook)
-
-     (defun my-java-mode-hook ()
-       (cond (window-system
-              (require 'andersl-java-font-lock)
-              (turn-on-font-lock))))
-
-     (setq font-lock-maximum-decoration t)
-
-
-
