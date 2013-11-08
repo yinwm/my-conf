@@ -90,6 +90,7 @@
 (setq tramp-default-method "ssh")
 
 (set-default-font "Dejavu Sans Mono")
+(set-face-attribute 'default (selected-frame) :height 140)
 
 ; (autoload 'js2-mode "js2" nil t)
 ; (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
@@ -163,3 +164,6 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 (tool-bar-mode -1)
+(load-theme 'tango-dark t)
+
+
